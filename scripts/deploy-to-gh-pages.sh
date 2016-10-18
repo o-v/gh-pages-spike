@@ -17,7 +17,7 @@ git config --global user.name "Travis CI"
 # mv ./${TRAVIS_BRANCH} ./dist/${TRAVIS_BRANCH}
 
 git fetch
-git checkout gh-pages
+git checkout -b gh-pages
 
 mkdir -p ${TRAVIS_BRANCH}
 
