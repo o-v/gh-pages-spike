@@ -10,7 +10,7 @@ git config --global user.email "nobody@nobody.org"
 git config --global user.name "Travis CI"
 
 # build (CHANGE THIS)
-npm run build
+# npm run build
 
 # copy dist folder into folder named after current branch
 # cp -r ./dist ./${TRAVIS_BRANCH}
