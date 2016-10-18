@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js:
+- '5'
+notifications:
+  webhooks:
+    on_success: change
+    on_failure: always
+script:
+- bash ./scripts/deploy-to-gh-pages.sh
+env:
+  global:
+  - GITHUB_REPO: o-v/gh-pages-spike
+# travis-encrypt -r o-v/gh-pages-spike GH_TOKEN=blahblahblah  
+  - secure: XN3zQF948oK2rvNjafGyTRa8vPcslO6pTJJq+7b4FOdM+CYwQS3QTix88d/ylZj7LmYsOigpDzMcamNvsA16qFdvNRGfeRj1TVRG9uChYBWBKDtBVe6r7Gxb/GkoxsMP2BhMXWIDV8CwLQE0dEOjylf5dYBPNq1IGHwbVH2sxH0+OrlJfHzVFKWGkiZpCp79ZO6Izf1CfmElneZKnfI+VZ6Ug0aa6MeWCTzEawTMp1CuTw2UVU2zDcAKTMq+U50A549T9/6LOmOmkthS8xUT6oOYWqLfTPh+rp4GEJ3mqBC7GQgHWTG0X9Odxk1/ij7cIzXQ9n1rXTXOYDqFzkKvu2W5NF5C3ZsbBKAzISr71Mqy1AZZHV9+bVOcEFIqTvOhGfGPVvXncyAQvtLN/mAX9vum06ubZJcia7d/7Ul/tQ/B9USfeZygozqgjOr0iP82dPEk6167HijU09JllujgbbPTg9zUPZsea9vuOE05Rq1faogtzP38uosFsxdi4QoNksYRMA/A0H6T5Wp4ekbBf3bTN7n+znDX6U884f8/U/vPyFCvXZB6CBGCMyXBQsSuEZZiZkipiw7Ooz3J9xOVcLMbGkR9NeG+TqlHC/TuL9AH3vf0URgVGkmJW5EdFELePJp63STZ0Otk0ixXD5jWRB6YJMDSlNT2D6WlrDj7lls=
+cache:
+  directories:
+    - node_modules

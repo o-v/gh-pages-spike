@@ -1,0 +1,22 @@
+{
+  "name": "gh-pages-spike",
+  "version": "0.1.0",
+  "description": "Spike multibranch deployments to gh-pages",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "npm install",
+    "build": "npm run prestart && gulp",
+    "start": "gulp --dev",
+    "test": "npm run build"
+  },
+  "engines": {
+    "node": ">=4.0",
+    "npm": ">=2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+  }
+}
