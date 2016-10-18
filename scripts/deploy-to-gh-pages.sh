@@ -23,7 +23,7 @@ echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# deploy
 	echo deploying ${TRAVIS_BRANCH}
-	cd dist
+	# cd dist
 	git init
 	git add .
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
