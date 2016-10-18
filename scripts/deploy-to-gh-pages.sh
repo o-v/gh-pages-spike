@@ -31,7 +31,7 @@ if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# git init
 	git add -A
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
-	git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" gh-pages > /dev/null 2>&1
+	git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" gh-pages # > /dev/null 2>&1
 
 else
 	#don't deploy
