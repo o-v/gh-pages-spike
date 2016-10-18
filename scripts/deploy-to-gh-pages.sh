@@ -16,6 +16,8 @@ git config --global user.name "Travis CI"
 # cp -r ./dist ./${TRAVIS_BRANCH}
 # mv ./${TRAVIS_BRANCH} ./dist/${TRAVIS_BRANCH}
 
+git checkout gh-pages
+
 mkdir -p ${TRAVIS_BRANCH}
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
@@ -24,7 +26,7 @@ if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# deploy
 	echo deploying ${TRAVIS_BRANCH}
 	# cd dist
-	git init
+	# git init
 	git add -A
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
 	git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" gh-pages > /dev/null 2>&1
