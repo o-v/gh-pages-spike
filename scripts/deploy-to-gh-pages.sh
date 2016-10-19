@@ -28,12 +28,13 @@ git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --branch gh-pa
 mkdir -p ${TRAVIS_BRANCH}
 echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 
-find . ! -path 'node_modules'
+find .
 
+echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 mkdir -p _DIST/${TRAVIS_BRANCH}
 cp -rf ${TRAVIS_BRANCH} _DIST/${TRAVIS_BRANCH}
 
-echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
+find .
 
 #if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# deploy
