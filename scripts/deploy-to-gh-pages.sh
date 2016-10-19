@@ -30,7 +30,7 @@ echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 
 find .
 
-cp -r $TRAVIS_BRANCH/readme.md _DIST
+cp -r $TRAVIS_BRANCH _DIST/$TRAVIS_BRANCH
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 
