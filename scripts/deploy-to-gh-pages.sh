@@ -21,7 +21,7 @@ find .
 
 # git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO_DIST}.git" _DIST
 git fetch
-git clone gh-pages
+git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --branch gh-pages _DIST
 
 find .
 
