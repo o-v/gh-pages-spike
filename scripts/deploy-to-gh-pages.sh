@@ -16,22 +16,32 @@ git config --global user.name "Travis CI"
 # cp -r ./dist ./${TRAVIS_BRANCH}
 # mv ./${TRAVIS_BRANCH} ./dist/${TRAVIS_BRANCH}
 
+
+find .
+
+# git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO_DIST}.git" _DIST
 git fetch
-git checkout -b gh-pages
+git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --branch gh-pages _DIST
+
+find .
 
 mkdir -p ${TRAVIS_BRANCH}
 echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
+
+find .
+
+cp -r $TRAVIS_BRANCH/readme.md _DIST
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 
 #if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# deploy
 	echo deploying ${TRAVIS_BRANCH}
-	# cd dist
+	cd _DIST
 	# git init
 	git add -A
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
-	git push --force "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"  > /dev/null 2>&1 # master # gh-pages # > /dev/null 2>&1
+	git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" gh-pages > /dev/null 2>&1
 
 #else
 #	#don't deploy
