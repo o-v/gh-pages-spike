@@ -17,13 +17,13 @@ git config --global user.name "Travis CI"
 # mv ./${TRAVIS_BRANCH} ./dist/${TRAVIS_BRANCH}
 
 
-find .
+# find .
 
 # git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO_DIST}.git" _DIST
 git fetch
 git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --branch gh-pages _DIST
 
-find .
+# find .
 
 mkdir -p ${TRAVIS_BRANCH}
 echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
