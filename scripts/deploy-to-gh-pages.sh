@@ -41,7 +41,7 @@ echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 	# git init
 	git add -A
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
-	git push --force "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" # master # gh-pages # > /dev/null 2>&1
+	git push --force "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" gh-pages # > /dev/null 2>&1
 
 #else
 #	#don't deploy
