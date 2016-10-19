@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
-node_js:
-- '5'
+# node_js:
+# - '5'
 notifications:
   webhooks:
     on_success: change
@@ -14,6 +14,6 @@ env:
   - GITHUB_REPO_DIST: o-v/gh-pages-spike-dist
 # travis-encrypt -r o-v/gh-pages-spike GITHUB_TOKEN=blahblahblah  
   - secure: Zdj75LXwXP+E1VYgeJI2ShysdUDnnbb5ofE7syAKJjAsMpeN5CWP+fBNLsfdayd8iXLERD1wBcHMKcdeij9Ait8kUA0JxJtpuwXUuQsx4Bsid+m6JEpENj5Mva/wxuze/C9pTJxeoOsCtcMMWUhRdxbobB5OMW/5dI0u2DfWWKjWaIDyUUcVSXuKZMmEukE531Kfsxa9+/avRgy5UW+cy57wtOKleERxp4aT9t+GVmyNOtum18R+C/qsSEtsNsrRET8P7/uLI55psDj9KVu8Hf6OqKM5HmH1fvvkYb0smKc7ySTYVdMT5aLbJ0rVaTUSX8nm0eVqoJ2s6PamktJEsdgxvFpxWkYeGYUi+PjvBM5HfFTZLH4k9WadQ1YOZa4A4jfScK4VGtARYCdUAJQHKepJvlfHxMMAkCeZEV8WjbFiKk9h9WgbwfhTkIhey9pVt39ORFJH0FW8mJJf1S5814RAfWXqfnYrnQLk7TqpY2yQbcY79xvQAaCmS/GmVzraflbAdmVWKaSMMVjuV/Hrea3mOtRN7SViJS/TAJ6PEGY4Xjc61FWP4dnUhnGa5xZi0Kj/ak8wpjD3/vBnSMK5yLUDAURU03fK+NWSa1LBqNk/v128LAWPhDV9mKdd9qM2ER7CV9g/0jQvyLeTW+z35BQDR9PxRhWzRjdjTtoIV30=
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
