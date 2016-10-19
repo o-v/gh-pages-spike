@@ -16,9 +16,12 @@ git config --global user.name "Travis CI"
 # cp -r ./dist ./${TRAVIS_BRANCH}
 # mv ./${TRAVIS_BRANCH} ./dist/${TRAVIS_BRANCH}
 
+
+find .
+
 # git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO_DIST}.git" _DIST
 git fetch
-git checkout -b gh-pages
+git clone gh-pages
 
 find .
 
