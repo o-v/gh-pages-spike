@@ -31,7 +31,7 @@ echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 find .
 
 # mkdir -p _DIST/${TRAVIS_BRANCH}
-cp -r $TRAVIS_BRANCH _DIST
+cp -r ${TRAVIS_BRANCH} _DIST
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 
