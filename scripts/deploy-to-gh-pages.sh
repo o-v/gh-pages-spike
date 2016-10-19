@@ -28,10 +28,10 @@ git clone "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --branch gh-pa
 mkdir -p ${TRAVIS_BRANCH}
 echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 
-find . ! -path '/.git' ! -path '/node_modules'
+find . ! -path 'node_modules'
 
 mkdir -p _DIST/${TRAVIS_BRANCH}
-cp -rf /${TRAVIS_BRANCH} /_DIST/${TRAVIS_BRANCH}
+cp -rf ${TRAVIS_BRANCH} _DIST/${TRAVIS_BRANCH}
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 
