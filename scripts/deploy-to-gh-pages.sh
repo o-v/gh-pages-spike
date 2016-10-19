@@ -24,7 +24,7 @@ echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
 
-if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
+#if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	# deploy
 	echo deploying ${TRAVIS_BRANCH}
 	# cd dist
@@ -33,8 +33,8 @@ if [ ${TRAVIS_BRANCH} = master ] || [ ${TRAVIS_BRANCH} = develop ]; then
 	git commit -m "Deploy ${TRAVIS_BRANCH} to Github Pages"
 	git push --force "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}-dist.git" # gh-pages # > /dev/null 2>&1
 
-else
-	#don't deploy
-	echo not deploying ${TRAVIS_BRANCH}
-
-fi
+#else
+#	#don't deploy
+#	echo not deploying ${TRAVIS_BRANCH}
+#
+#fi
