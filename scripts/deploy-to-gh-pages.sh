@@ -30,6 +30,7 @@ echo "${TRAVIS_BRANCH}" > $TRAVIS_BRANCH/readme.md
 
 find .
 
+mkdir -p _DIST/${TRAVIS_BRANCH}
 cp -r $TRAVIS_BRANCH/readme.md _DIST
 
 echo TRAVIS_BRANCH: ${TRAVIS_BRANCH}
